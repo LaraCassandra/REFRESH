@@ -16,6 +16,7 @@
 		4F58A4C726FBB4580037850F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58A4C626FBB4580037850F /* ContentView.swift */; };
 		4F58A4C926FBB45C0037850F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F58A4C826FBB45C0037850F /* Assets.xcassets */; };
 		4F58A4CC26FBB45D0037850F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F58A4CB26FBB45C0037850F /* Preview Assets.xcassets */; };
+		4FCB205E2718CC28009EB230 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB205D2718CC28009EB230 /* ImagePicker.swift */; };
 		4FCC909B27182A6F0020A933 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC909A27182A6F0020A933 /* HomeView.swift */; };
 		4FCC909D2718339B0020A933 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC909C2718339B0020A933 /* FeedView.swift */; };
 		4FCC909F271833F10020A933 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC909E271833F10020A933 /* ProfileView.swift */; };
@@ -40,6 +41,7 @@
 		4F58A4C826FBB45C0037850F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F58A4CB26FBB45C0037850F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F58A4CD26FBB45D0037850F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FCB205D2718CC28009EB230 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4FCC909A27182A6F0020A933 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4FCC909C2718339B0020A933 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		4FCC909E271833F10020A933 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		4FCB205A2718CB8A009EB230 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4FCB205D2718CC28009EB230 /* ImagePicker.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				4F0A7489270F0955002E5610 /* FirestoreService.swift in Sources */,
 				4FE1AAD4270EEE1C00746CD0 /* RegisterView.swift in Sources */,
 				4F0A7487270F0774002E5610 /* AuthService.swift in Sources */,
+				4FCB205E2718CC28009EB230 /* ImagePicker.swift in Sources */,
 				4F58A4C726FBB4580037850F /* ContentView.swift in Sources */,
 				4F58A4C526FBB4580037850F /* refreshApp.swift in Sources */,
 				4FCC90A1271834030020A933 /* NewPostView.swift in Sources */,
