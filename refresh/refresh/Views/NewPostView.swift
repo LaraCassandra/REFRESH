@@ -52,7 +52,14 @@ struct NewPostView: View {
             self.showingAlert = true
             return
         }
-        self.clear()
+        StorageService.savePost(caption: self.caption, image: self.pickedImage!, onSuccess: {
+            self.clear()
+        }) {
+            (errorMessage) in
+            self.errorMessage = errorMessage
+            self.showingAlert = true
+            return
+        }
     }
     
     var body: some View {
