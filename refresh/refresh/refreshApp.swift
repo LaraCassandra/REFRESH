@@ -12,10 +12,16 @@ import Firebase
 struct refreshApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @AppStorage("userId") var userId: String = ""
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if userId.isEmpty {
+                ContentView()
+            }
+            else {
+                HomeView()
+            }	
         }
     }
 }
