@@ -10,7 +10,7 @@ import Firebase
 import FirebaseFirestore
 import FirebaseAuth
 
-class FirestoreService {
+class FirestoreService: ObservableObject {
     
     // CREATE AN INSTANCE OF FIRESTORE
     static var db = Firestore.firestore()
@@ -50,6 +50,51 @@ class FirestoreService {
                 print("Error writing document: \(error)")
             } else {
                 print("Document added successfully")
+            }
+        }
+        
+    }
+    
+    @Published var posts = [Post]()
+    
+    func fetchAllPosts(){
+        
+        FirestoreService.db.collection("posts").getDocuments{
+            (querySnapshot, error) in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            else {
+                
+                self.posts = querySnapshot!.documents.map{ (queryDocument) -> Post in
+                    
+                    let document = queryDocument.data()
+                    
+                    let caption = document["caption"] as? String ?? ""
+                    let ownerId = document["ownerId"] as? String ?? ""
+                
+//                    var username = ""
+//
+//                    FirestoreService.db.collection("users").document(ownerId).getDocument{
+//                        (document, error) in
+//                        username = document![username] as? String ?? ""
+//
+//                        if let error = error {
+//                            print(error)
+//                            username = document!["username"] as? String ?? ""
+//                        }
+//                    }
+                    
+                    let imageUrl = document["imageUrl"] as? String ?? ""
+                    let date = document["date"] as? Double ?? 00
+                    let likeCount = document["likeCount"] as? Int ?? 0
+                    
+                    return Post(postId: queryDocument.documentID, caption: caption, imageUrl: imageUrl, ownerID: ownerId, likeCount: likeCount, date: date)
+                    
+                }
+                
             }
         }
         

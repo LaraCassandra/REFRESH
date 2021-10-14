@@ -18,6 +18,8 @@
 		4F58A4CC26FBB45D0037850F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F58A4CB26FBB45C0037850F /* Preview Assets.xcassets */; };
 		4FCB205E2718CC28009EB230 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB205D2718CC28009EB230 /* ImagePicker.swift */; };
 		4FCB20622718D83F009EB230 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB20612718D83F009EB230 /* StorageService.swift */; };
+		4FCB20692718E089009EB230 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB20682718E089009EB230 /* PostCardView.swift */; };
+		4FCB206B2718E901009EB230 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB206A2718E901009EB230 /* PostModel.swift */; };
 		4FCC909B27182A6F0020A933 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC909A27182A6F0020A933 /* HomeView.swift */; };
 		4FCC909D2718339B0020A933 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC909C2718339B0020A933 /* FeedView.swift */; };
 		4FCC909F271833F10020A933 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC909E271833F10020A933 /* ProfileView.swift */; };
@@ -44,6 +46,8 @@
 		4F58A4CD26FBB45D0037850F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FCB205D2718CC28009EB230 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4FCB20612718D83F009EB230 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		4FCB20682718E089009EB230 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
+		4FCB206A2718E901009EB230 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		4FCC909A27182A6F0020A933 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4FCC909C2718339B0020A933 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		4FCC909E271833F10020A933 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		4FCB20632718DFAC009EB230 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4FCB206A2718E901009EB230 /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				4FCC909C2718339B0020A933 /* FeedView.swift */,
 				4FCC909E271833F10020A933 /* ProfileView.swift */,
 				4FCC90A0271834030020A933 /* NewPostView.swift */,
+				4FCB20682718E089009EB230 /* PostCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 				4FCC909D2718339B0020A933 /* FeedView.swift in Sources */,
 				4FCB20622718D83F009EB230 /* StorageService.swift in Sources */,
 				4FCC909F271833F10020A933 /* ProfileView.swift in Sources */,
+				4FCB206B2718E901009EB230 /* PostModel.swift in Sources */,
 				4F2EE411270EDFA2009FDCB4 /* LoginView.swift in Sources */,
 				4FCC909B27182A6F0020A933 /* HomeView.swift in Sources */,
 				4F0A7489270F0955002E5610 /* FirestoreService.swift in Sources */,
@@ -319,6 +326,7 @@
 				4FCB205E2718CC28009EB230 /* ImagePicker.swift in Sources */,
 				4F58A4C726FBB4580037850F /* ContentView.swift in Sources */,
 				4F58A4C526FBB4580037850F /* refreshApp.swift in Sources */,
+				4FCB20692718E089009EB230 /* PostCardView.swift in Sources */,
 				4FCC90A1271834030020A933 /* NewPostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

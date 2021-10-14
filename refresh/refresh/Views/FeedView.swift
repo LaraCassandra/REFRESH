@@ -8,8 +8,34 @@
 import SwiftUI
 
 struct FeedView: View {
+    
+    @ObservedObject var viewModel = FirestoreService()
+    
     var body: some View {
-        Text("Feed View!")
+        
+        NavigationView {
+            
+            ScrollView{
+
+                if viewModel.posts.count < 1 {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color("Blue")))
+                }
+                else {
+                    ForEach(viewModel.posts) { post in
+                        PostCardView(post: post)
+                    }
+                
+                }
+                
+            }
+            .navigationBarItems(leading: Text("YOUR FEED"))
+        }
+        .onAppear(perform: {
+            viewModel.fetchAllPosts()
+        })
+        .accentColor(Color("Blue"))
+        
     }
 }
 
