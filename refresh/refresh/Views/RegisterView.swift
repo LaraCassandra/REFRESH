@@ -50,6 +50,11 @@ struct RegisterView: View {
         
     }
     
+    // HIDE KEYBOARD
+    func hideKeyboard () {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
     var body: some View {
         
         NavigationView {
@@ -76,20 +81,22 @@ struct RegisterView: View {
                 
                 VStack {
                     
+                    
                     Text("Username")
                         .foregroundColor(.gray)
                         .font(Font.custom("Lato", size: 15))
                     
                     HStack {
                         Image(systemName: "person")
-                            .padding(.leading, 10)
+                            .foregroundColor(Color("Peach"))
                         TextField("username", text: $signUpUserval)
                             .padding()
                             .font(Font.custom("Lato", size: 15))
                             .disableAutocorrection(true)
                             .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
                     }
-                    .padding(.leading, 50)
+                    .padding(5)
+                    .padding(.horizontal, 30)
                     
                     Text("Email")
                         .foregroundColor(.gray)
@@ -97,14 +104,15 @@ struct RegisterView: View {
 
                     HStack {
                         Image(systemName: "envelope")
-                            .padding(.leading, 10)
+                            .foregroundColor(Color("Peach"))
                         TextField("email", text: $signUpEmailVal)
                             .padding()
                             .font(Font.custom("Lato", size: 15))
                             .disableAutocorrection(true)
                             .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
                     }
-                    .padding(.leading, 50)
+                    .padding(5)
+                    .padding(.horizontal, 30)
                     
                     Text("Password")
                         .foregroundColor(.gray)
@@ -113,14 +121,15 @@ struct RegisterView: View {
                     
                     HStack {
                         Image(systemName: "lock")
-                            .padding(.leading, 10)
+                            .foregroundColor(Color("Peach"))
                         SecureField("password", text: $signUpPasswordVal)
                             .padding()
                             .font(Font.custom("Lato", size: 15))
                             .disableAutocorrection(true)
                             .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
                     }
-                    .padding(.leading, 50)
+                    .padding(5)
+                    .padding(.horizontal, 30)
                     
                     Text("Confirm Password")
                         .foregroundColor(.gray)
@@ -129,14 +138,16 @@ struct RegisterView: View {
                     
                     HStack {
                         Image(systemName: "lock")
-                            .padding(.leading, 10)
+                            .foregroundColor(Color("Peach"))
                         SecureField("confirm password", text: $signUpPassword2Val)
                             .padding()
                             .font(Font.custom("Lato", size: 15))
                             .disableAutocorrection(true)
                             .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
                     }
-                    .padding(.leading, 50)
+                    .padding(5)
+                    .padding(.horizontal, 30)
+
                     
                     Button(action: {
                         signUp()
@@ -149,6 +160,7 @@ struct RegisterView: View {
                     .foregroundColor(.white)
                     .background(Color("Peach"))
                     .cornerRadius(8)
+                    .padding(.top, 30)
                     .frame(width: 250.0, height: 50.0, alignment: .center)
                     .alert(isPresented: $showingAlert, content: {
                         Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("Try Again")))
@@ -174,6 +186,9 @@ struct RegisterView: View {
                 
                 Spacer()
                 
+            }
+            .onTapGesture {
+                self.hideKeyboard()
             }
     
         }

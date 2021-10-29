@@ -47,6 +47,11 @@ struct LoginView: View {
         
     }
     
+    // HIDE KEYBOARD
+    func hideKeyboard () {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
     var body: some View {
         
         NavigationView {
@@ -73,36 +78,43 @@ struct LoginView: View {
                 
                 VStack {
                     
-                    Text("Email")
-                        .foregroundColor(.gray)
-                        .font(Font.custom("Lato", size: 15))
+                    VStack {
+                        Text("Email")
+                            .foregroundColor(.gray)
+                            .font(Font.custom("Lato", size: 15))
+                            
                         
-                    
-                    HStack {
-                        Image(systemName: "envelope")
-                            .padding(.leading, 10)
-                        TextField("email", text: $emailVal)
-                            .padding()
-                            .font(Font.custom("Lato", size: 15))
-                            .disableAutocorrection(true)
-                            .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
+                        HStack {
+                            Image(systemName: "envelope")
+                                .foregroundColor(Color("Peach"))
+                            TextField("email", text: $emailVal)
+                                .padding()
+                                .font(Font.custom("Lato", size: 15))
+                                .disableAutocorrection(true)
+                                .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
+                        }
+                        .padding(5)
+                        .padding(.horizontal, 30)
                     }
-                    .padding(.leading, 50)
                     
-                    Text("Password")
-                        .foregroundColor(.gray)
-                        .font(Font.custom("Lato", size: 15))
-                    
-                    HStack {
-                        Image(systemName: "lock")
-                            .padding(.leading, 10)
-                        SecureField("password", text: $passwordVal)
-                            .padding()
+                    VStack {
+                        Text("Password")
+                            .foregroundColor(.gray)
                             .font(Font.custom("Lato", size: 15))
-                            .disableAutocorrection(true)
-                            .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
+                        
+                        HStack {
+                            Image(systemName: "lock")
+                                .foregroundColor(Color("Peach"))
+                            SecureField("password", text: $passwordVal)
+                                .padding()
+                                .font(Font.custom("Lato", size: 15))
+                                .disableAutocorrection(true)
+                                .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
+                        }
+                        .padding(5)
+                        .padding(.bottom, 40)
+                        .padding(.horizontal, 30)
                     }
-                    .padding(.leading, 50)
                     
                     Button(action: {
                         login()
@@ -140,6 +152,9 @@ struct LoginView: View {
                 
                 Spacer()
                 
+            }
+            .onTapGesture {
+                self.hideKeyboard()
             }
             
         }
