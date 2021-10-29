@@ -30,11 +30,13 @@ struct FeedView: View {
                 
             }
             .navigationBarItems(leading: Text("YOUR FEED"))
+            .accentColor(Color("Blue"))
+            .foregroundColor(Color("Blue"))
         }
         .onAppear(perform: {
             viewModel.fetchAllPosts()
         })
-        .accentColor(Color("Blue"))
+        
         
     }
 }

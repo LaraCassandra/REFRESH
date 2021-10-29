@@ -10,12 +10,14 @@
 		27041F7FA21B0BB4942EA40D /* Pods_refresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3B1208E769CAC4B31DEC32 /* Pods_refresh.framework */; };
 		4F0A7487270F0774002E5610 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A7486270F0774002E5610 /* AuthService.swift */; };
 		4F0A7489270F0955002E5610 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A7488270F0955002E5610 /* FirestoreService.swift */; };
+		4F0DAE2427218BCD0036F56C /* ProfilePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0DAE2327218BCD0036F56C /* ProfilePostView.swift */; };
 		4F2EE411270EDFA2009FDCB4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2EE410270EDFA2009FDCB4 /* LoginView.swift */; };
 		4F52FE1B26FBB8DA00ADA1BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F52FE1A26FBB8D900ADA1BC /* GoogleService-Info.plist */; };
 		4F58A4C526FBB4580037850F /* refreshApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58A4C426FBB4580037850F /* refreshApp.swift */; };
 		4F58A4C726FBB4580037850F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58A4C626FBB4580037850F /* ContentView.swift */; };
 		4F58A4C926FBB45C0037850F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F58A4C826FBB45C0037850F /* Assets.xcassets */; };
 		4F58A4CC26FBB45D0037850F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F58A4CB26FBB45C0037850F /* Preview Assets.xcassets */; };
+		4F931FA6272AF1AC00845477 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F931FA5272AF1AC00845477 /* UserModel.swift */; };
 		4FCB205E2718CC28009EB230 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB205D2718CC28009EB230 /* ImagePicker.swift */; };
 		4FCB20622718D83F009EB230 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB20612718D83F009EB230 /* StorageService.swift */; };
 		4FCB20692718E089009EB230 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB20682718E089009EB230 /* PostCardView.swift */; };
@@ -36,6 +38,7 @@
 		05AB9DD07F697A1FF1EF6F24 /* Pods-refresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-refresh.debug.xcconfig"; path = "Target Support Files/Pods-refresh/Pods-refresh.debug.xcconfig"; sourceTree = "<group>"; };
 		4F0A7486270F0774002E5610 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4F0A7488270F0955002E5610 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		4F0DAE2327218BCD0036F56C /* ProfilePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostView.swift; sourceTree = "<group>"; };
 		4F2EE410270EDFA2009FDCB4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4F52FE1A26FBB8D900ADA1BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F58A4C126FBB4580037850F /* refresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = refresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,7 @@
 		4F58A4C826FBB45C0037850F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F58A4CB26FBB45C0037850F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F58A4CD26FBB45D0037850F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F931FA5272AF1AC00845477 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4FCB205D2718CC28009EB230 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4FCB20612718D83F009EB230 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		4FCB20682718E089009EB230 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
@@ -87,8 +91,6 @@
 		4F58A4B826FBB4580037850F = {
 			isa = PBXGroup;
 			children = (
-				4FCB20632718DFAC009EB230 /* Model */,
-				4FCB205A2718CB8A009EB230 /* Utilities */,
 				4F58A4C326FBB4580037850F /* refresh */,
 				4F58A4C226FBB4580037850F /* Products */,
 				850CADE6179ABD3E614B2246 /* Pods */,
@@ -107,6 +109,8 @@
 		4F58A4C326FBB4580037850F /* refresh */ = {
 			isa = PBXGroup;
 			children = (
+				4FCB20632718DFAC009EB230 /* Model */,
+				4FCB205A2718CB8A009EB230 /* Utilities */,
 				4F0A7485270F0752002E5610 /* Services */,
 				4FE1AAC7270EE8A700746CD0 /* Assets */,
 				4FE97526270B28E400535CA8 /* Views */,
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				4FCB206A2718E901009EB230 /* PostModel.swift */,
+				4F931FA5272AF1AC00845477 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				4FCC909E271833F10020A933 /* ProfileView.swift */,
 				4FCC90A0271834030020A933 /* NewPostView.swift */,
 				4FCB20682718E089009EB230 /* PostCardView.swift */,
+				4F0DAE2327218BCD0036F56C /* ProfilePostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FCC909D2718339B0020A933 /* FeedView.swift in Sources */,
+				4F0DAE2427218BCD0036F56C /* ProfilePostView.swift in Sources */,
 				4FCB20622718D83F009EB230 /* StorageService.swift in Sources */,
 				4FCC909F271833F10020A933 /* ProfileView.swift in Sources */,
 				4FCB206B2718E901009EB230 /* PostModel.swift in Sources */,
@@ -323,6 +330,7 @@
 				4F0A7489270F0955002E5610 /* FirestoreService.swift in Sources */,
 				4FE1AAD4270EEE1C00746CD0 /* RegisterView.swift in Sources */,
 				4F0A7487270F0774002E5610 /* AuthService.swift in Sources */,
+				4F931FA6272AF1AC00845477 /* UserModel.swift in Sources */,
 				4FCB205E2718CC28009EB230 /* ImagePicker.swift in Sources */,
 				4F58A4C726FBB4580037850F /* ContentView.swift in Sources */,
 				4F58A4C526FBB4580037850F /* refreshApp.swift in Sources */,

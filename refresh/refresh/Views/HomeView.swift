@@ -23,7 +23,7 @@ struct HomeView: View {
                     Image(systemName: "plus")
                 })
             
-            ProfileView()
+            ProfileView(user: User(userName: "", email: "", posts: []))
                 .tabItem({
                     Image(systemName: "person")
                 })

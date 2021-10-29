@@ -85,6 +85,7 @@ struct LoginView: View {
                             .padding()
                             .font(Font.custom("Lato", size: 15))
                             .disableAutocorrection(true)
+                            .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
                     }
                     .padding(.leading, 50)
                     
@@ -99,6 +100,7 @@ struct LoginView: View {
                             .padding()
                             .font(Font.custom("Lato", size: 15))
                             .disableAutocorrection(true)
+                            .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
                     }
                     .padding(.leading, 50)
                     
