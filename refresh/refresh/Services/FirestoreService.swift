@@ -63,7 +63,7 @@ class FirestoreService: ObservableObject {
     
     func fetchAllPosts(){
         
-        FirestoreService.db.collection("posts").getDocuments{
+        FirestoreService.db.collection("posts").order(by: "date").getDocuments{
             (querySnapshot, error) in
             
             if let error = error {
@@ -72,27 +72,28 @@ class FirestoreService: ObservableObject {
             }
             else {
                 
+                self.posts.sort(by: {$1.date > $0.date})
+                
                 self.posts = querySnapshot!.documents.map{ (queryDocument) -> Post in
                     
                     let document = queryDocument.data()
                     
                     let caption = document["caption"] as? String ?? ""
                     let ownerId = document["ownerId"] as? String ?? ""
+
                     
-                    let username = document["username"] as? String ?? ""
-                
+                    // ! DOES NOT WORK
+                    // GET POST OWNER USERNAME
 //                    var username = ""
 //
-//                    FirestoreService.db.collection("users").document(ownerId).getDocument{
-//                        (document, error) in
-//
-//                        let user = document?.data()
-//
-//                        username = user?["username"] as? String ?? ""
-//
+//                    let docRef = FirestoreService.db.collection("users").document(ownerId)
+//                    docRef.getDocument{ (doc, error ) in
 //                        if let error = error {
 //                            print(error)
-//                            username = user?["username"] as? String ?? ""
+//                            return
+//                        }
+//                        else {
+//                            username = doc?.data()?["username"] as? String ?? ""
 //                        }
 //                    }
                     
@@ -138,7 +139,7 @@ class FirestoreService: ObservableObject {
     // GET USER POSTS BASED ON OWNERID
     func getUserPosts(){
         
-        FirestoreService.db.collection("posts").addSnapshotListener{
+        FirestoreService.db.collection("posts").order(by: "date").addSnapshotListener{
             (snap, error) in
             
             guard let posts = snap else {return}
@@ -154,6 +155,7 @@ class FirestoreService: ObservableObject {
                 let likeCount = document["likeCount"] as? Int ?? 0
                 
                 FirestoreService.getUserInfo(userId: ownerId){ (user) in
+                    self.posts.sort(by: {$1.date > $0.date})
                     self.posts.append(Post(postId: post.document.documentID, caption: caption, imageUrl: imgageUrl, ownerID: ownerId, likeCount: likeCount, date: date))
                 }
                 

@@ -23,7 +23,7 @@ struct RegisterView: View {
     @State var errorTitle = "Oh No!"
     
     func errorCheck() -> String? {
-        if signUpUserval.trimmingCharacters(in: .whitespaces).isEmpty || signUpEmailVal.trimmingCharacters(in: .whitespaces).isEmpty || signUpPasswordVal.trimmingCharacters(in: .whitespaces).isEmpty
+        if signUpUserval.trimmingCharacters(in: .whitespaces).isEmpty || signUpEmailVal.trimmingCharacters(in: .whitespaces).isEmpty || signUpPasswordVal.trimmingCharacters(in: .whitespaces).isEmpty || signUpPassword2Val.trimmingCharacters(in: .whitespaces).isEmpty || signUpPassword2Val.trimmingCharacters(in: .whitespaces) != signUpPasswordVal.trimmingCharacters(in: .whitespaces)
             {
             return "Please fill in all required info"
         }

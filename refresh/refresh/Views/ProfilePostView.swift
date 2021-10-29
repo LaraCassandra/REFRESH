@@ -61,7 +61,7 @@ struct ProfilePostView: View {
                 .foregroundColor(Color.black)
                 .font(Font.custom("Lato", size: 19))
             
-            Text("\(NSDate(timeIntervalSince1970: post.date))")
+            Text("\(Date(timeIntervalSinceNow: post.date))")
                 .padding(.top, 4)
                 .foregroundColor(Color.gray)
                 .font(Font.custom("Lato-Thin", size: 12))
