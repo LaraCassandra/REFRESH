@@ -62,6 +62,11 @@ struct NewPostView: View {
         }
     }
     
+    // HIDE KEYBOARD
+    func hideKeyboard () {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
     var body: some View {
         
         NavigationView {
@@ -72,33 +77,52 @@ struct NewPostView: View {
                     .foregroundColor(Color("Blue"))
                     .font(Font.custom("ebrima-bold", size: 20))
                     .padding(.bottom, 1)
-                    .frame(alignment: .leading)
-                    .multilineTextAlignment(.leading)
+                
+                Spacer()
+                
+                
+                Text("Pick an image")
+                    .foregroundColor(Color("Blue"))
+                    .font(Font.custom("Lato", size: 20))
+                    .padding(.bottom, 5)
                 
                 if displayImage != nil {
                     displayImage!.resizable()
                         .scaledToFit()
-                        .frame(width: 250, height: 150, alignment: .center)
+                        .frame(width: 300, height: 150, alignment: .center)
                         .onTapGesture(perform: {
                             self.showingImagePicker = true
                         })
                 }
                 else {
                     Image(systemName: "photo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 200, alignment: .center)
-                        .padding(10)
-                        .foregroundColor(Color("Peach"))
+                        .frame(width: 300, height: 150, alignment: .center)
+                        .foregroundColor(Color.black)
+                        .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color.black))
                         .onTapGesture(perform: {
                             self.showingImagePicker = true
                         })
                 }
                 
+                Spacer()
+                
+                Text("Write a caption")
+                    .foregroundColor(Color("Blue"))
+                    .font(Font.custom("Lato", size: 20))
+                    .padding(.bottom, 5)
+                
                 TextEditor(text: $caption)
-                    .padding(20)
-                    .frame(height: 200)
-                    .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color("Peach")))
+                    .padding(5)
+                    .padding(.leading, 10)
+                    .frame(width: 300, height: 150)
+                    .background(RoundedRectangle(cornerRadius: 10.0).stroke(Color.black))
+                    .foregroundColor(Color.black)
+                    .font(Font.custom("Lato", size: 15))
+                    .onTapGesture {
+                        self.clear()
+                    }
+                
+                Spacer()
                 
                 Button(action: {
                     uploadImage()
@@ -111,11 +135,13 @@ struct NewPostView: View {
                 })
                 .foregroundColor(.white)
                 .background(Color("Peach"))
-                .frame(width: 250.0, height: 50.0, alignment: .center)
+                .frame(width: 300, height: 50.0, alignment: .center)
                 .cornerRadius(8)
                 .alert(isPresented: $showingAlert, content: {
                     Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("Try Again")))
                 })
+                
+                Spacer()
                 
             }
             .padding()
@@ -136,8 +162,14 @@ struct NewPostView: View {
             }
             
         }
-        
+        .onTapGesture {
+            self.hideKeyboard()
+        }
+        .navigationBarItems(leading: Text("CREATE A NEW POST"))
+        .foregroundColor(Color("Blue"))
+        .accentColor(Color("Blue"))
     }
+    
 }
 
 struct NewPostView_Previews: PreviewProvider {

@@ -20,6 +20,7 @@ class StorageService {
     // INSTANCE OF THE FOLDER IN STORAGE
     static var storagePost = storageRoot.child("posts")
     
+  
     // FUNCTION TO PERFORM UPLOAD
     static func savePost (caption: String, image: UIImage, onSuccess: @escaping()->Void, onError: @escaping(_ errorMessage: String)->Void){
         
