@@ -88,24 +88,28 @@ struct ProfileView: View {
                     }
                         
                 }
-                .padding(20)
-                .onAppear(perform: {
-                    FirestoreService.getUserInfo(userId: userId, onSuccess: {user in
-                        self.user = user
-                    })
-                })
-                    
+                .padding(20)                    
                     
                 
                 
-            }.navigationBarItems(leading: Text("YOUR PROFILE"))
+            }.navigationBarItems(leading: Text("YOUR PROFILE"),
+                                 trailing:
+                                    Button(action: {
+                                        AuthService.signOut()
+                                    }, label: {
+                                        Image(systemName: "square.and.arrow.up")
+                                    }))
             .foregroundColor(Color("Blue"))
             
             }
                 
         }
         .onAppear(perform: {
-            viewModel.fetchAllPosts()
+            viewModel.getUserPosts()
+            
+            FirestoreService.getUserInfo(userId: userId, onSuccess: {user in
+                self.user = user
+            })
         })
         
     }

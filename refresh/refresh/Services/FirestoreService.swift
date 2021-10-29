@@ -47,7 +47,7 @@ class FirestoreService: ObservableObject {
             "imageUrl": imageUrl,
             "ownerId": Auth.auth().currentUser!.uid,
             "likeCount": 0,
-            "date": Date().timeIntervalSince1970
+            "date": Date().timeIntervalSinceNow,
         ]) { error in
             if let error = error {
                 print("Error writing document: \(error)")
@@ -78,18 +78,23 @@ class FirestoreService: ObservableObject {
                     
                     let caption = document["caption"] as? String ?? ""
                     let ownerId = document["ownerId"] as? String ?? ""
+                    
+                    let username = document["username"] as? String ?? ""
                 
-                    var username = ""
-
-                    FirestoreService.db.collection("users").document(ownerId).getDocument{
-                        (document, error) in
-                        username = document!["username"] as? String ?? ""
-
-                        if let error = error {
-                            print(error)
-                            username = document!["username"] as? String ?? ""
-                        }
-                    }
+//                    var username = ""
+//
+//                    FirestoreService.db.collection("users").document(ownerId).getDocument{
+//                        (document, error) in
+//
+//                        let user = document?.data()
+//
+//                        username = user?["username"] as? String ?? ""
+//
+//                        if let error = error {
+//                            print(error)
+//                            username = user?["username"] as? String ?? ""
+//                        }
+//                    }
                     
                     let imageUrl = document["imageUrl"] as? String ?? ""
                     let date = document["date"] as? Double ?? 00
@@ -129,9 +134,13 @@ class FirestoreService: ObservableObject {
         }
     }
     
+    
+    // GET USER POSTS BASED ON OWNERID
     func getUserPosts(){
+        
         FirestoreService.db.collection("posts").addSnapshotListener{
             (snap, error) in
+            
             guard let posts = snap else {return}
             
             posts.documentChanges.forEach{ (post) in

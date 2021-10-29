@@ -69,6 +69,7 @@ struct ProfilePostView: View {
         }
         .padding()
         
+        
             }
         
         }
