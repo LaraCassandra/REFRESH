@@ -18,6 +18,13 @@
 		4F58A4C926FBB45C0037850F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F58A4C826FBB45C0037850F /* Assets.xcassets */; };
 		4F58A4CC26FBB45D0037850F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F58A4CB26FBB45C0037850F /* Preview Assets.xcassets */; };
 		4F931FA6272AF1AC00845477 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F931FA5272AF1AC00845477 /* UserModel.swift */; };
+		4FB97EA7272C179C00AFF6F4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB97EA6272C179C00AFF6F4 /* WidgetKit.framework */; };
+		4FB97EA9272C179C00AFF6F4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB97EA8272C179C00AFF6F4 /* SwiftUI.framework */; };
+		4FB97EAC272C179C00AFF6F4 /* QuickPostWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB97EAB272C179C00AFF6F4 /* QuickPostWidget.swift */; };
+		4FB97EAF272C17A000AFF6F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB97EAE272C17A000AFF6F4 /* Assets.xcassets */; };
+		4FB97EB1272C17A000AFF6F4 /* QuickPostWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4FB97EAD272C179C00AFF6F4 /* QuickPostWidget.intentdefinition */; };
+		4FB97EB2272C17A000AFF6F4 /* QuickPostWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4FB97EAD272C179C00AFF6F4 /* QuickPostWidget.intentdefinition */; };
+		4FB97EB5272C17A000AFF6F4 /* QuickPostWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4FB97EA5272C179C00AFF6F4 /* QuickPostWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4FCB205E2718CC28009EB230 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB205D2718CC28009EB230 /* ImagePicker.swift */; };
 		4FCB20622718D83F009EB230 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB20612718D83F009EB230 /* StorageService.swift */; };
 		4FCB20692718E089009EB230 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB20682718E089009EB230 /* PostCardView.swift */; };
@@ -34,6 +41,30 @@
 		4FE1AAD4270EEE1C00746CD0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1AAD3270EEE1C00746CD0 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4FB97EB3272C17A000AFF6F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F58A4B926FBB4580037850F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FB97EA4272C179C00AFF6F4;
+			remoteInfo = QuickPostWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4FB97EB9272C17A000AFF6F4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4FB97EB5272C17A000AFF6F4 /* QuickPostWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		05AB9DD07F697A1FF1EF6F24 /* Pods-refresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-refresh.debug.xcconfig"; path = "Target Support Files/Pods-refresh/Pods-refresh.debug.xcconfig"; sourceTree = "<group>"; };
 		4F0A7486270F0774002E5610 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -48,6 +79,13 @@
 		4F58A4CB26FBB45C0037850F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F58A4CD26FBB45D0037850F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F931FA5272AF1AC00845477 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4FB97EA5272C179C00AFF6F4 /* QuickPostWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickPostWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FB97EA6272C179C00AFF6F4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4FB97EA8272C179C00AFF6F4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4FB97EAB272C179C00AFF6F4 /* QuickPostWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickPostWidget.swift; sourceTree = "<group>"; };
+		4FB97EAD272C179C00AFF6F4 /* QuickPostWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = QuickPostWidget.intentdefinition; sourceTree = "<group>"; };
+		4FB97EAE272C17A000AFF6F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FB97EB0272C17A000AFF6F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FCB205D2718CC28009EB230 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4FCB20612718D83F009EB230 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		4FCB20682718E089009EB230 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
@@ -75,6 +113,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FB97EA2272C179C00AFF6F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FB97EA9272C179C00AFF6F4 /* SwiftUI.framework in Frameworks */,
+				4FB97EA7272C179C00AFF6F4 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				4F58A4C326FBB4580037850F /* refresh */,
+				4FB97EAA272C179C00AFF6F4 /* QuickPostWidget */,
 				4F58A4C226FBB4580037850F /* Products */,
 				850CADE6179ABD3E614B2246 /* Pods */,
 				6F9A2F29FB51CB86D2AC6AD8 /* Frameworks */,
@@ -102,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				4F58A4C126FBB4580037850F /* refresh.app */,
+				4FB97EA5272C179C00AFF6F4 /* QuickPostWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +179,17 @@
 				4F58A4CB26FBB45C0037850F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4FB97EAA272C179C00AFF6F4 /* QuickPostWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4FB97EAB272C179C00AFF6F4 /* QuickPostWidget.swift */,
+				4FB97EAD272C179C00AFF6F4 /* QuickPostWidget.intentdefinition */,
+				4FB97EAE272C17A000AFF6F4 /* Assets.xcassets */,
+				4FB97EB0272C17A000AFF6F4 /* Info.plist */,
+			);
+			path = QuickPostWidget;
 			sourceTree = "<group>";
 		};
 		4FCB205A2718CB8A009EB230 /* Utilities */ = {
@@ -188,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				5B3B1208E769CAC4B31DEC32 /* Pods_refresh.framework */,
+				4FB97EA6272C179C00AFF6F4 /* WidgetKit.framework */,
+				4FB97EA8272C179C00AFF6F4 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,15 +275,34 @@
 				4F58A4BE26FBB4580037850F /* Frameworks */,
 				4F58A4BF26FBB4580037850F /* Resources */,
 				70AFCACCCCED5722B06DBD39 /* [CP] Embed Pods Frameworks */,
+				4FB97EB9272C17A000AFF6F4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4FB97EB4272C17A000AFF6F4 /* PBXTargetDependency */,
 			);
 			name = refresh;
 			productName = refresh;
 			productReference = 4F58A4C126FBB4580037850F /* refresh.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4FB97EA4272C179C00AFF6F4 /* QuickPostWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FB97EB6272C17A000AFF6F4 /* Build configuration list for PBXNativeTarget "QuickPostWidgetExtension" */;
+			buildPhases = (
+				4FB97EA1272C179C00AFF6F4 /* Sources */,
+				4FB97EA2272C179C00AFF6F4 /* Frameworks */,
+				4FB97EA3272C179C00AFF6F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickPostWidgetExtension;
+			productName = QuickPostWidgetExtension;
+			productReference = 4FB97EA5272C179C00AFF6F4 /* QuickPostWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -233,6 +314,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					4F58A4C026FBB4580037850F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					4FB97EA4272C179C00AFF6F4 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -251,6 +335,7 @@
 			projectRoot = "";
 			targets = (
 				4F58A4C026FBB4580037850F /* refresh */,
+				4FB97EA4272C179C00AFF6F4 /* QuickPostWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +353,14 @@
 				4F52FE1B26FBB8DA00ADA1BC /* GoogleService-Info.plist in Resources */,
 				4FE1AAD2270EEA2500746CD0 /* ebrima.ttf in Resources */,
 				4FE1AACC270EE91800746CD0 /* Lato-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FB97EA3272C179C00AFF6F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FB97EAF272C17A000AFF6F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +425,7 @@
 				4F0A7487270F0774002E5610 /* AuthService.swift in Sources */,
 				4F931FA6272AF1AC00845477 /* UserModel.swift in Sources */,
 				4FCB205E2718CC28009EB230 /* ImagePicker.swift in Sources */,
+				4FB97EB2272C17A000AFF6F4 /* QuickPostWidget.intentdefinition in Sources */,
 				4F58A4C726FBB4580037850F /* ContentView.swift in Sources */,
 				4F58A4C526FBB4580037850F /* refreshApp.swift in Sources */,
 				4FCB20692718E089009EB230 /* PostCardView.swift in Sources */,
@@ -339,7 +433,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FB97EA1272C179C00AFF6F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FB97EB1272C17A000AFF6F4 /* QuickPostWidget.intentdefinition in Sources */,
+				4FB97EAC272C179C00AFF6F4 /* QuickPostWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FB97EB4272C17A000AFF6F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FB97EA4272C179C00AFF6F4 /* QuickPostWidgetExtension */;
+			targetProxy = 4FB97EB3272C17A000AFF6F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4F58A4CE26FBB45D0037850F /* Debug */ = {
@@ -462,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05AB9DD07F697A1FF1EF6F24 /* Pods-refresh.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFC5CCF9E600BC7E1B718C0E /* Pods-refresh.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +612,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openwindow.refresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4FB97EB7272C17A000AFF6F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UD364UW3QH;
+				INFOPLIST_FILE = QuickPostWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.openwindow.refresh.QuickPostWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4FB97EB8272C17A000AFF6F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UD364UW3QH;
+				INFOPLIST_FILE = QuickPostWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.openwindow.refresh.QuickPostWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -521,6 +676,15 @@
 			buildConfigurations = (
 				4F58A4D126FBB45D0037850F /* Debug */,
 				4F58A4D226FBB45D0037850F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FB97EB6272C17A000AFF6F4 /* Build configuration list for PBXNativeTarget "QuickPostWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FB97EB7272C17A000AFF6F4 /* Debug */,
+				4FB97EB8272C17A000AFF6F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

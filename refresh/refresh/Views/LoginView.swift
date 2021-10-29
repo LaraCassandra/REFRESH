@@ -119,7 +119,7 @@ struct LoginView: View {
                     Button(action: {
                         login()
                     }, label: {
-                        Text("Sign Up")
+                        Text("Sign In")
                             .font(Font.custom("Lato-Bold", size: 20))
                             .padding()
                             .frame(maxWidth: .infinity, alignment: .center)

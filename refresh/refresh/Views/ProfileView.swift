@@ -76,18 +76,13 @@ struct ProfileView: View {
                     
                 LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
                     
-                    if user.posts.count <= 0 {
-                        Text("You have no posts :(")
-                            .font(Font.custom("Lato", size: 18))
-                        
-                    }
-                    else if user.posts.count < 1 {
+                    if viewModel.posts.count < 1 {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle(tint: Color("Blue")))
                     }
                     else {
                         
-                        ForEach(user.posts) { post in
+                        ForEach(viewModel.posts) { post in
                             ProfilePostView(post: post)
                         }
                     }
@@ -110,6 +105,7 @@ struct ProfileView: View {
                 
         }
         .onAppear(perform: {
+            viewModel.getUserPosts()
             
             FirestoreService.getUserInfo(userId: userId, onSuccess: {user in
                 self.user = user

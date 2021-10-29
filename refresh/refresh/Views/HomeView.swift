@@ -15,7 +15,6 @@ struct HomeView: View {
             FeedView()
                 .tabItem({
                     Image(systemName: "house")
-                    
                 })
             
             NewPostView()
