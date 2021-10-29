@@ -1,24 +1,24 @@
 <!-- PROJECT SHIELDS -->
 
-![Contributors](https://img.shields.io/github/contributors/LaraCassandra/QuizBee?style=for-the-badge&color=blue)
-![Repo Size](https://img.shields.io/github/repo-size/LaraCassandra/QuizBee?style=for-the-badge)
-![Code Size](https://img.shields.io/github/languages/code-size/LaraCassandra/QuizBee?style=for-the-badge)
-![Languages](https://img.shields.io/github/languages/count/LaraCassandra/QuizBee?style=for-the-badge)
-![Top Language](https://img.shields.io/github/languages/top/LaraCassandra/QuizBee?style=for-the-badge)
+![Contributors](https://img.shields.io/github/contributors/LaraCassandra/REFRESH?style=for-the-badge&color=blue)
+![Repo Size](https://img.shields.io/github/repo-size/LaraCassandra/REFRESH?style=for-the-badge)
+![Code Size](https://img.shields.io/github/languages/code-size/LaraCassandra/REFRESH?style=for-the-badge)
+![Languages](https://img.shields.io/github/languages/count/LaraCassandra/REFRESH?style=for-the-badge)
+![Top Language](https://img.shields.io/github/languages/top/LaraCassandra/REFRESH?style=for-the-badge)
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/LaraCassandra/QuizBee">
+  <a href="https://github.com/LaraCassandra/REFRESH">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">QuizBee</h3>
+  <h3 align="center">REFRESH</h3>
 
   <p align="center">
-    Animal Trivia App
+    iOS Social Media Application for Skincare Lovers
     <br />
 
   </p>
@@ -95,13 +95,13 @@
 
 In times of COVID-19 and the lockdown, a lighthearted trivia is just the right thing to get anyone feeling better. For Android 301 we were required to create a fun trivia app to cheer up our friends and family in these tough times.
 
-QuizBee is the simple, yet entertaining quiz app you've been waiting for to test your animal fun facts. Choose from different categories if you think thats where your strength lies, but be warned, you might get caught by a sneaky question. You may even learn a thing or two. :wink:
+REFRESH is the simple, yet entertaining quiz app you've been waiting for to test your animal fun facts. Choose from different categories if you think thats where your strength lies, but be warned, you might get caught by a sneaky question. You may even learn a thing or two. :wink:
 
 <br>
 
 ### Built With
 
-QuizBee is an android application built using:
+REFRESH is an android application built using:
 
 * [Kotlin](https://kotlinlang.org/) Language
 * [Android Studio](https://developer.android.com/studio) as IDE
@@ -127,7 +127,7 @@ There are a few ways you can go about cloning this repo, check it out:
 
 1. Git
    ```sh
-   git clone https://github.com/LaraCassandra/QuizBee.git
+   git clone https://github.com/LaraCassandra/REFRESH.git
    ```
 
 Once you've clone the repo, just open up Android Studio and select `File -> Open`, this will open a file explorer so just find the project directory and click the `open` button.
@@ -139,7 +139,7 @@ Once you've clone the repo, just open up Android Studio and select `File -> Open
 You can open the project straight from Android Studio by selecting `File -> New -> Project from Version Control`. Make sure you have Git selected on the dropdown, place the link in the URL field and click `Clone`.
 
 ```sh
-https://github.com/LaraCassandra/QuizBee.git
+https://github.com/LaraCassandra/REFRESH.git
 ```
 
 <br>
@@ -236,14 +236,14 @@ In week 6, we were able to get **valuable** feedback from our lecturer and peer 
 
 ## Video Demonstration
 
-[Download Demo](https://github.com/LaraCassandra/QuizBee/blob/main/images/LaraCook_190218_Android301_Demo.mp4)
+[Download Demo](https://github.com/LaraCassandra/REFRESH/blob/main/images/LaraCook_190218_Android301_Demo.mp4)
 
 <br>
  
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/LaraCassandra/QuizBee/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/LaraCassandra/REFRESH/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -276,7 +276,7 @@ Lara Cook | 190218
 
 190218@virtualwindow.co.za
 
-Project Link: [https://github.com/LaraCassandra/QuizBee](https://github.com/LaraCassandra/QuizBee)
+Project Link: [https://github.com/LaraCassandra/REFRESH](https://github.com/LaraCassandra/REFRESH)
 
 
 <br>
